@@ -1,4 +1,5 @@
 import utils
+import pandas as pd
 import utils as util
 import tkinter as tk
 '''
@@ -20,7 +21,6 @@ util.writeOutput(Outputs)
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-import pandas as pd
 
 class InterfaceGrafica:
     def __init__(self, janela):
