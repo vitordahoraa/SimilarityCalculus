@@ -7,3 +7,5 @@ main.spec
 dist/
 
 .venv/
+
+build/
