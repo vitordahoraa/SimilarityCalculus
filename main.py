@@ -2,6 +2,7 @@ import utils
 import pandas as pd
 import utils as util
 import tkinter as tk
+import os
 '''
 Dataset = utils.readDataset()
 
@@ -17,6 +18,8 @@ Outputs = util.calcSimilarity(Inputs,Dataset,Weights,WeightsSum,MaxValues,MinVal
 
 util.writeOutput(Outputs)
 '''
+
+print(os.getcwd())
 
 import tkinter as tk
 from tkinter import ttk
