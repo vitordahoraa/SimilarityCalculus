@@ -1,0 +1,11 @@
+.idea/
+
+__pychache__/
+
+main.spec
+
+dist/
+
+.venv/
+
+build/
