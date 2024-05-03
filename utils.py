@@ -64,10 +64,11 @@ def calcSimilarity(Inputs, Dataset, Weights, WeightsSum, MaxValuePerColumn, MinV
             exit(400)
 
         #Get first row of the search dataframe
-        rowOfCase = rowsOfCase.copy().iloc[0]
+        rowOfCase = rowsOfCase.iloc[0]
 
         #Assign the value of the area burnt of the searched row to the case row
         rowOfCase['area burnt by wildfires in 2024'] = case['area burnt by wildfires in 2024'][0]
+        tempDF.loc[(tempDF['Entity'] == case['Entity'].iloc[0]) & (tempDF['Week'] == case['Week'].iloc[0]),'area burnt by wildfires in 2024'] = case['area burnt by wildfires in 2024'][0]
 
 
         #For each column in dataset

@@ -1,22 +1,5 @@
-import utils
 import pandas as pd
 import utils as util
-import tkinter as tk
-'''
-Dataset = utils.readDataset()
-
-Weights = utils.readWeights()
-
-MaxValues, MinValues = util.getMaxAndMin(Dataset)
-
-WeightsSum = util.sumWeights(Weights)
-
-Inputs = util.readInput()
-
-Outputs = util.calcSimilarity(Inputs,Dataset,Weights,WeightsSum,MaxValues,MinValues,'')
-
-util.writeOutput(Outputs)
-'''
 
 import tkinter as tk
 from tkinter import ttk
@@ -115,7 +98,7 @@ class InterfaceGrafica:
         for columnName in self.Weights:
             # Obter os textos inseridos e exibir em uma caixa de mensagem
             self.Weights[columnName] = self.textWeight[columnName].get()
-        utils.writeWeights(self.Weights)
+        util.writeWeights(self.Weights)
         mensagem = f"Pesos Atualizados com sucesso"
         messagebox.showinfo("Pesos Atualizados com sucesso", mensagem)
     def criar_aba_input(self):
@@ -164,7 +147,7 @@ class InterfaceGrafica:
                  }
         Input = pd.DataFrame(Input)
 
-        utils.writeInput(Input, self.textInputCase.get())
+        util.writeInput(Input, self.textInputCase.get())
 
         mensagem = f"Input {self.textInputCase.get()} Inserido com sucesso"
         messagebox.showinfo("Input Inserido com sucesso", mensagem)
